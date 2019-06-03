@@ -25,3 +25,17 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.addDancerButton{
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.blinky{
+  border:10px solid greenyellow;
+}
+
+.bouncy{
+  border:10px solid rgb(255, 47, 238);
+  border-radius: 0px;
+}
