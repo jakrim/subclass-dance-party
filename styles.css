@@ -3,18 +3,21 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background: url('assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
   font-size: 18px;
+  
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
 .title, .addDancerButton{
-  padding:5px 12px;
+  font-size: 20px;
+  padding:5px 18px;
   float:right;
 }
 .topbar{
-  height:32px;
+  height:40px;
   background-color: #555;
 }
 .title{
@@ -28,14 +31,21 @@ body, a:link, a:visited, a:active{
 
 .addDancerButton{
   text-decoration-line: underline;
-  cursor: pointer;
+  cursor: pointer;s
 }
 
 .blinky{
-  border:10px solid greenyellow;
+  border:30px solid greenyellow;
+  border-radius: 30px;
 }
 
 .bouncy{
-  border:10px solid rgb(255, 47, 238);
+  border:50px solid rgb(255, 47, 238);
   border-radius: 0px;
+}
+
+.jose{
+  border:0px;
+
+  
 }
