@@ -12,5 +12,8 @@ var Dancer = function(top, left, timeBetweenSteps) {
 };
 
 Dancer.prototype.step = function() {
-  setTimeout(function() { return this.step; }, this.timeBetweenSteps);
+  // let contextCall = this.step.bind(this)
+
+
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
