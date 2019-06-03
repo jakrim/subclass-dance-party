@@ -8,17 +8,17 @@ var JoseDancer = function(top, left, timeBetweenSteps) {
 JoseDancer.prototype = Object.create(Dancer.prototype);
 JoseDancer.prototype.constructor = JoseDancer;
 
-JoseDancer.prototype.step = function () {
+JoseDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
 
-if (this.joe) {
-  this.$node.empty();
-  this.$node.append('<img src="assets/jose.jpg">');
-  this.joe = false;
-} else {
-  this.$node.empty();
-  this.$node.append('<img src="assets/joe.jpg">');
-  this.joe = true;
-}
+  if (this.joe) {
+    this.$node.empty();
+    this.$node.append('<img src="assets/jose.jpg">');
+    this.joe = false;
+  } else {
+    this.$node.empty();
+    this.$node.append('<img src="assets/joe.jpg">');
+    this.joe = true;
+  }
 
-}
+};
