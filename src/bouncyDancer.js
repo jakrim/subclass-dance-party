@@ -2,8 +2,6 @@ var BouncyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.up = false;
   this.$node.addClass('bouncy');
-  // this.$node.on('mouseover', this.$node.css({'border-color': `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)});`}));
-  // this.$node.on('mouseover', this.$node.css({'border-color': 'black'}));
 };
 
 BouncyDancer.prototype = Object.create(Dancer.prototype);
