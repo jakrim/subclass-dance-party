@@ -2,7 +2,8 @@ var BouncyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.up = false;
   this.$node.addClass('bouncy');
-  this.bounceSize = 30;
+  // this.$node.on('mouseover', this.$node.css({'border-color': `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)});`}));
+  // this.$node.on('mouseover', this.$node.css({'border-color': 'black'}));
 };
 
 BouncyDancer.prototype = Object.create(Dancer.prototype);
@@ -19,9 +20,4 @@ BouncyDancer.prototype.step = function() {
     this.top += 30;
   }
   this.up = !this.up;
-}; 
-
-
-
-
-//bouncy dancer - from initial position -> max height position -> back to initial (maybe on landing, squish)
+};

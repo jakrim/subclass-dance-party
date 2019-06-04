@@ -6,7 +6,6 @@ body{
   background: url('assets/background.jpg') no-repeat center center fixed;
   background-size: cover;
   font-size: 18px;
-  
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -22,6 +21,8 @@ body, a:link, a:visited, a:active{
 }
 .title{
   background-color: #777;
+  text-shadow: 3px 3px red;
+  color: blanchedalmond;
 }
 .dancer{
   border:10px solid red;
@@ -31,7 +32,7 @@ body, a:link, a:visited, a:active{
 
 .addDancerButton{
   text-decoration-line: underline;
-  cursor: pointer;s
+  cursor: pointer;
 }
 
 .blinky{
@@ -44,8 +45,11 @@ body, a:link, a:visited, a:active{
   border-radius: 0px;
 }
 
-.jose{
+.surprise{
   border:0px;
+}
 
-  
+.surprisePhoto{
+  height: 120px;
+  width: 80px;
 }

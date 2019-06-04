@@ -14,3 +14,8 @@ var Dancer = function(top, left, timeBetweenSteps) {
 Dancer.prototype.step = function() {
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
+
+Dancer.prototype.lineUp = function() {
+  this.$node.css({left: 0});
+  this.left = 0;
+};

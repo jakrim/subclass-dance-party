@@ -1,7 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
 
-  $('.addDancerButton').on('click', function(event) { 
+  $('.addDancerButton').on('click', function() { 
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
     
     // get the maker function for the kind of dancer we're supposed to make
@@ -9,12 +9,27 @@ $(document).ready(function() {
     
     // make a dancer with a random position
     var dancer = new dancerMakerFunction(
-      $('body').height() * Math.random(),
+      Math.max($('body').height() * Math.random(), 100),
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
+
+    if (dancer instanceof BouncyDancer) {
+      dancer.$node.on('mouseover', function () {
+        //16777215 is ffffff converted to base-10
+        dancer.$node.css({'border-color': '#' + Math.floor(Math.random() * 16777215).toString(16)});
+      });
+    }
+
     $('body').append(dancer.$node);
+
+    dancers.push(dancer);
   });
+
+  $('.lineUpButton').on('click', function() {
+    dancers.forEach(ele => ele.lineUp());
+  });
+
 });
   
   
