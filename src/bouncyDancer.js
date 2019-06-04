@@ -11,13 +11,22 @@ BouncyDancer.prototype.constructor = BouncyDancer;
 BouncyDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   if (!this.up) {
-    this.$node.css({top: this.top - 30, left: this.left});
-    this.top -= 30;
+    this.$node.animate({
+      top: this.top - 30
+    }, this.timeBetweenSteps, function() {
+      this.top -= 30;
+    });
   } else {
-    this.$node.css({top: this.top + 30, left: this.left});
-    this.top += 30;
+    this.$node.animate({
+      top: this.top + 30
+    }, this.timeBetweenSteps, function() {
+      this.top += 30;
+    });
   }
   this.up = !this.up;
+
+
+
 };
 
 BouncyDancer.prototype.changeColor = function() {

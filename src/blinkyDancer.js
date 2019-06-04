@@ -13,12 +13,13 @@ BlinkyDancer.prototype.step = function() {
 };
 
 BlinkyDancer.prototype.bounce = function() {
+  var bounceDistance = 60;
   if (!this.up) {
-    this.$node.css({top: this.top - 60, left: this.left});
-    this.top -= 60;
+    this.$node.css({top: this.top - bounceDistance, left: this.left});
+    this.top -= bounceDistance;
   } else {
-    this.$node.css({top: this.top + 60, left: this.left});
-    this.top += 60;
+    this.$node.css({top: this.top + bounceDistance, left: this.left});
+    this.top += bounceDistance;
   }
   this.up = !this.up;
 };

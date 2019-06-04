@@ -12,12 +12,12 @@ body, a:link, a:visited, a:active{
   color: lightblue;
 }
 .title, .addDancerButton{
-  font-size: 20px;
+  font-size: 30px;
   padding:5px 18px;
   float:right;
 }
 .topbar{
-  height:40px;
+  height:50px;
   background-color: #555;
 }
 .title{
@@ -33,17 +33,17 @@ body, a:link, a:visited, a:active{
 
 .addDancerButton{
   text-decoration-line: underline;
-  cursor: pointer;s
+  cursor: pointer;
 }
 
 .blinky{
-  border:30px solid greenyellow;
+  border:30px dotted rgb(25, 110, 248);
   border-radius: 30px;
 }
 
 .bouncy{
-  border:50px solid rgb(255, 47, 238);
-  border-radius: 0px;
+  border:40px solid rgb(255, 255, 255);
+  border-radius: 20px;
 }
 
 .surprise{
