@@ -19,3 +19,23 @@ Dancer.prototype.lineUp = function() {
   this.$node.css({left: 0});
   this.left = 0;
 };
+
+class Dancer {
+  constructor(top, left, timeBetweenSteps) {
+    this.top = top;
+    this.left = left;
+    this.timeBetweenSteps = timeBetweenSteps;
+    this.$node = $('<span class="dancer"></span>');
+    this.$node.css({top: this.top, left: this.left});
+    this.step();
+  }
+
+  step() {
+    setTimeout(this.step, this.timeBetweenSteps);
+  }
+
+  lineUp() {
+    this.$node.css({left: 0});
+    this.left = 0;
+  }
+};

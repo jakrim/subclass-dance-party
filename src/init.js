@@ -16,8 +16,13 @@ $(document).ready(function() {
 
     if (dancer instanceof BouncyDancer) {
       dancer.$node.on('mouseover', function () {
-        //16777215 is ffffff converted to base-10
-        dancer.$node.css({'border-color': '#' + Math.floor(Math.random() * 16777215).toString(16)});
+        dancer.changeColor();
+      });
+    }
+
+    if(dancer instanceof BlinkyDancer) {
+      dancer.$node.on('click', function() {
+        dancer.bounce();
       });
     }
 

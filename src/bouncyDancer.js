@@ -19,3 +19,11 @@ BouncyDancer.prototype.step = function() {
   }
   this.up = !this.up;
 };
+
+BouncyDancer.prototype.changeColor = function() {
+  var randomHexGenerator = function() {
+    //16777215 is ffffff converted to base-10
+    return '#' + Math.floor(Math.random() * 16777215).toString(16);
+  };
+  this.$node.css({'border-color': randomHexGenerator()});
+};
