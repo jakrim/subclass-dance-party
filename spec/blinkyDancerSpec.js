@@ -31,4 +31,22 @@ describe('blinkyDancer', function() {
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
   });
+
+  // describe('ES6 refactoring', function() {
+  //   it('should not call native method Object.create', function() {
+  //     let code = JSON.stringify(blinkyDancer.js);
+  //     expect(code.includes('Object.create')).to.be(false);
+  //   });
+  // })
+
+  describe('bounce', function() {
+    it('should have a bouncy method', function() {
+      expect(blinkyDancer.bounce).to.be.a('function');
+    });
+    it('should not be called at construction', function() {
+      sinon.spy(blinkyDancer, 'bounce');
+      expect(blinkyDancer.bounce.callCount).to.be.equal(0);
+    });
+  });
+
 });
